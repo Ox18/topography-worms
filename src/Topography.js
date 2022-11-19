@@ -144,7 +144,7 @@ class Topography {
 
 
         for (let i = pointBase; i < pointFinal; i++) {
-            if (this.isPixel(x, i)) {
+            if (this.isPixel(x, i) || this.isPixel(x + 1, i) || this.isPixel(x - 1, i) || this.isPixel(x + 2, i) || this.isPixel(x - 2, i)) {
                 return true;
             }
         }
